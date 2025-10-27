@@ -250,8 +250,12 @@ def scan() {
             cmd << "--apiurl ${params.SCANOSS_API_URL}"
 
             // Add API token if available
-            if(env.SCANOSS_API_TOKEN) {
+            if (env.SCANOSS_API_TOKEN) {
                 cmd << "--key ${SCANOSS_API_TOKEN}"
+            } else {
+                echo "No ScanOSS token provided — using anonymous API mode"
+            }
+
             }
 
             // Skip Snippet
