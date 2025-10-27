@@ -256,8 +256,6 @@ def scan() {
                 echo "No ScanOSS token provided — using anonymous API mode"
             }
 
-            }
-
             // Skip Snippet
             if(params.SKIP_SNIPPET) {
                cmd << "-S"
