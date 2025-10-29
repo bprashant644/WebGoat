@@ -25,3 +25,4 @@ jobs:
         uses: scanoss/code-scan-action@v1
         with:
           policies: copyleft, undeclared
+          api.key: ${{ secrets.SCANOSS_API_KEY }}
